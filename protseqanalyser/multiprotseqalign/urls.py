@@ -5,5 +5,5 @@ from . import views
 app_name = 'multiprotseqalign'
 
 urlpatterns = [
-    url(r'^$', views.test, name="test"),
+    url(r'^$', views.predict, name="predict"),
 ]

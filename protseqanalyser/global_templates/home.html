@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>
+            Protein Sequence Analyser
+        </title>
+    </head>
+    <body>
+        <h1>
+            Welcome!
+        </h1>
+        <ul>
+            <li><a href="{% url 'multiprotseqalign:predict' %}">Multi Protein Sequence Align</a></li>
+            <li><a href="{% url 'secstructpred:predict' %}"></a>Secondary Structure Prediction</li>
+            <li><a href="{% url 'secstructclasspred:predict' %}"></a>Secondary Structure Class Prediction</li>
+            <li><a href="{% url 'foldrecog:predict' %}"></a>Protein Fold Recognition</li>
+            <li><a href="{% url 'subcelllocpred:predict' %}"></a>Subcell Location Prediction</li>
+        </ul>
+    </body>
+</html>

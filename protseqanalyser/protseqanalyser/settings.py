@@ -38,6 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'multiprotseqalign.apps.MultiprotseqalignConfig',
+    'secstructpred.apps.SecstructpredConfig',
+    'secstructclasspred.apps.SecstructclasspredConfig',
+    'foldrecog.apps.FoldrecogConfig',
+    'subcelllocpred.apps.SubcelllocpredConfig',
 ]
 
 MIDDLEWARE = [
@@ -55,7 +59,7 @@ ROOT_URLCONF = 'protseqanalyser.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['global_templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
