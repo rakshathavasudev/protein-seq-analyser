@@ -1,94 +1,13 @@
+{% load staticfiles %}
+
 <html>
     <head>
+        <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
         <title>
             Protein Sequence Analyser
         </title>
-     <style>
-        body{
-            font-family: "Lato", sans-serif;
-            background-image: url("img/background2.jpg");
-            background-repeat: no-repeat;
-            background-size: cover;
-            margin: 0;
-            padding: 0;
-        }
-        h1,h2,h5{
-            text-align: center;
-            color:#F0FFF0;
-            font-weight: bold;
-        }
-        div.trans{
-            opacity: 0.7;
-            align-content: center;
-            background-color: black;
-            padding: 15px;
-            margin: 30px 320px;
-            width: 50%;
-        }
-        li {
-            list-style-type: none;
-         }
-         ul.top{
-            overflow: hidden;
-            background-color: black;
-            margin: 0;
-            padding: 0;
-         }
-         ul.top li h2{
-            color: #ffffff;
-            font-weight: bolder;
-            float: left;
-            padding: 5px 30px;
-
-         }
-
-         #slide{
-            font-size:30px;
-            cursor:pointer;
-            margin-left: 20px;
-            color:#F0FFF0;
-         }
-         .sidenav li a{
-            text-decoration: none;
-            color: #F5F5F5;
-            display: block;
-            transition: 0.3s;
-            padding: 10px;
-            font-weight: bolder;
-            font-size: 18px;
-         }
-         .sidenav {
-            height: 100%;
-            width: 0;
-            position: fixed;
-            z-index: 1;
-            top: 0;
-            background-color: #111;
-            overflow-x: hidden;
-            transition: 0.3s;
-            padding-top: 40px;
-            padding-left: 0px;
-        }
-        .sidenav a:hover {
-            color: #696969;
-        }
-
-        .sidenav .closebtn {
-            position: absolute;
-            top: 0;
-            right:25px;
-            font-size: 36px;
-            margin-left: 10px;
-        }
-
-        /*@media screen and (max-height: 450px) {
-            .sidenav {padding-top: 15px;}
-            .sidenav a {font-size: 18px;}
-        }*/
-}
-     </style>   
     </head>
-    <body>
+    <body style="background-image: url('{% static "background2.jpg" %}')">
         
         <ul class="top">
             <li><h2>Logo</h2></li>
@@ -103,11 +22,11 @@
            <li><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></li>
             <li><a href="{% url 'multiprotseqalign:predict' %}">Multi Protein Sequence Align</a></li>
             <li><a href="{% url 'secstructpred:predict' %}">Secondary Structure Prediction</a></li>
-          <li><a href="{% url 'secstructclasspred:predict' %}">Secondary Structure Class Prediction</a></li>
+            <li><a href="{% url 'secstructclasspred:predict' %}">Secondary Structure Class Prediction</a></li>
             <li><a href="{% url 'foldrecog:predict' %}">Protein Fold Recognition</a></li>
             <li><a href="{% url 'subcelllocpred:predict' %}">Subcell Location Prediction</a></li>
         </ul>
-        <span id="slide"  onclick="openNav()">&#9776; Contents</span>
+        <span id="slide" onclick="openNav()">&#9776; Contents</span>
 
         <script>
             function openNav() {
