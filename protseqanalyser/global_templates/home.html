@@ -1,5 +1,8 @@
+{% load staticfiles %}
+
 <html>
     <head>
+        <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
         <title>
             Protein Sequence Analyser
         </title>
@@ -11,7 +14,8 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
-    <body>
+
+    <body style="background-image: url('{% static "img/background2.jpg" %}')">
         
         <ul class="top">
             <li><h2>Logo</h2></li>
@@ -67,7 +71,6 @@
                 </div>
             </div>  
          </div>
-
-            
+       
     </body>
 </html>

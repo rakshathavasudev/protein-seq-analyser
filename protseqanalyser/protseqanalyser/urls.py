@@ -1,5 +1,6 @@
 from django.contrib import admin
 from django.conf.urls import url,include
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from . import views
 
 urlpatterns = [
@@ -11,3 +12,5 @@ urlpatterns = [
     url('subcelllocpred/',include('subcelllocpred.urls')),
     url(r'$',views.home, name='home'),
 ]
+
+urlpatterns += staticfiles_urlpatterns()

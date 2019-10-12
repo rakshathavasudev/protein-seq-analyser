@@ -1,0 +1,10 @@
+<a href="{% url 'home' %}">Home</a>
+
+<div>
+    <h1>Subcell Location Prediction</h1>
+    <form action="{% url 'subcelllocpred:predict' %}" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit">
+    </form>
+</div>

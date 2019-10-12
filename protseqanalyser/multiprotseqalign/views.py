@@ -12,3 +12,5 @@ def predict(request):
     else:
         form = forms.ProteinSequenceForm
     return render(request, 'multiprotseqalign/predict.html', {'form':form})
+
+    

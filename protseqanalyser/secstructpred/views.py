@@ -1,6 +1,14 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from . import models
+from . import forms
 
 # Create your views here.
 def predict(request):
-    return HttpResponse('secstructpred')
+    if request.method == 'POST':
+        form = forms.ProteinSequenceForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return render(request, 'secstructpred/process.html')
+    else:
+        form = forms.ProteinSequenceForm
+    return render(request, 'secstructpred/predict.html', {'form':form})
