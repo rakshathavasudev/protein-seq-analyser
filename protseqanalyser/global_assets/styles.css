@@ -1,81 +1,72 @@
 body{
     font-family: "Lato", sans-serif;
-    /* background-image: url("/static/background2.jpg"); */
+    /*background-image: url("img/background2.jpg");*/
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0;
     padding: 0;
 }
-h1,h2,h5{
+.text-holder h2,h5{
     text-align: center;
     color:#F0FFF0;
     font-weight: bold;
+    position: relative;
+    width: 100%;
+ 
 }
-div.trans{
+
+.container{
+    position: relative;
+    width: 100%;
+    margin-top: 30px;
+}
+.trans{
     opacity: 0.7;
     align-content: center;
     background-color: black;
-    padding: 15px;
-    margin: 30px 320px;
-    width: 50%;
+    
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
 }
+        
 li {
     list-style-type: none;
- }
- ul.top{
+    
+    }
+a{
+    color: #f0fff0;
+
+}
+a:hover{
+    color: #f0fff0;
+   
+}
+         
+ul.top{
     overflow: hidden;
     background-color: black;
     margin: 0;
     padding: 0;
- }
- ul.top li h2{
+}
+         
+ul.top li h2{
     color: #ffffff;
     font-weight: bolder;
     float: left;
     padding: 5px 30px;
-
- }
-
- #slide{
-    font-size:30px;
-    cursor:pointer;
-    margin-left: 20px;
-    color:#F0FFF0;
- }
- .sidenav li a{
-    text-decoration: none;
-    color: #F5F5F5;
-    display: block;
-    transition: 0.3s;
-    padding: 10px;
-    font-weight: bolder;
-    font-size: 18px;
- }
- .sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.3s;
-    padding-top: 40px;
-    padding-left: 0px;
-}
-.sidenav a:hover {
-    color: #696969;
 }
 
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right:25px;
-    font-size: 36px;
-    margin-left: 10px;
+.card-deck{
+    padding: 20px;
+    margin: 0;
 }
 
-/*@media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
-}*/
+.card{
+    background-color: black;
+    opacity: 0.9;
+    color: #f0fff0;
+}
+
