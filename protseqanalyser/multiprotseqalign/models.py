@@ -2,4 +2,10 @@ from django.db import models
 
 # Create your models here.
 class ProteinSequence(models.Model):
-    sequence = models.CharField(max_length=100)
+    # id_no = models.AutoField(primary_key=True)
+    sequence = models.TextField()
+    completed = models.BooleanField(default=False)
+    
+
+# class jobs(models.Model):
+#     completed = models.Bool

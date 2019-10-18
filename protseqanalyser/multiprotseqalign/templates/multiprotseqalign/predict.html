@@ -1,4 +1,6 @@
-<a href="{% url 'home' %}">Home</a>
+{% extends 'base.html' %}
+
+{% block one %}
 
 <div>
     <h1>Multi Protein Sequence Align</h1>
@@ -8,3 +10,5 @@
         <input type="submit">
     </form>
 </div>
+
+{% endblock %}
