@@ -6,36 +6,71 @@
         <title>
             Protein Sequence Analyser
         </title>
+        <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
     </head>
+
     <body style="background-image: url('{% static "img/background2.jpg" %}')">
         
         <ul class="top">
             <li><h2>Logo</h2></li>
         </ul>
+        <div class="container">
+        <div class="trans"></div>
         
-        <div class="trans">
-        <h1>Welcome!</h1>
-        <h2>Protein Sequence Analyzer</h2>
-        <h5>A brief description</h5>
+        <div class="text-holder"><h2>Protein Sequence Analyzer</h2>
+        <br>
+        <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h5></div>
         </div>
-        <ul class="sidenav" id="nav">
-           <li><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></li>
-            <li><a href="{% url 'multiprotseqalign:predict' %}">Multi Protein Sequence Align</a></li>
-            <li><a href="{% url 'secstructpred:predict' %}">Secondary Structure Prediction</a></li>
-            <li><a href="{% url 'secstructclasspred:predict' %}">Secondary Structure Class Prediction</a></li>
-            <li><a href="{% url 'foldrecog:predict' %}">Protein Fold Recognition</a></li>
-            <li><a href="{% url 'subcelllocpred:predict' %}">Subcell Location Prediction</a></li>
-        </ul>
-        <span id="slide" onclick="openNav()">&#9776; Contents</span>
-
-        <script>
-            function openNav() {
-                document.getElementById("nav").style.width = "250px";
-            }
-
-            function closeNav() {
-                document.getElementById("nav").style.width = 0;
-            }
-        </script>
+ 
+        <div class="card-deck">
+            <div class="card">
+                <div class="card-body text-center">
+                    <h5 class="card-title">
+                        <li><a href="{% url 'multiprotseqalign:predict' %}">Multi Protein Sequence Align</a></li>
+                    </h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+            </div>
+             <div class="card">
+                <div class="card-body text-center">
+                    <h5 class="card-title" >
+                        <li><a href="{% url 'secstructpred:predict' %}">Secondary Structure Prediction</a>
+                        </li>
+                    </h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body text-center">
+                    <h5 class="card-title">
+                        <li><a href="{% url 'secstructclasspred:predict' %}">Secondary Structure Class Prediction</a></li>
+                    </h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body text-center">
+                    <h5 class="card-title">
+                        <li><a href="{% url 'foldrecog:predict' %}">Protein Fold Recognition</a></li>
+                    </h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+            </div>  
+            <div class="card">
+                <div class="card-body text-center">
+                    <h5>
+                        <li><a href="{% url 'subcelllocpred:predict' %}">Subcell Location Prediction</a></li>
+                    </h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+            </div>  
+         </div>
+       
     </body>
 </html>
