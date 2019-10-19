@@ -34,5 +34,6 @@ def result(request,id):
             return render(request, 'multiprotseqalign/message.html', {'message':message})    
         return render(request, 'multiprotseqalign/result.html', {'result':result})    
     else:
+        DOMAIN_NAME = 'localhost:8000/'
         message = f'Your entered input sequence is still under process. Please come back later to the same url {DOMAIN_NAME}{request.get_full_path()}'
         return render(request, 'multiprotseqalign/message.html', {'message':message})
