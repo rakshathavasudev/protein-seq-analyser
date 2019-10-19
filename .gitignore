@@ -1,0 +1,4 @@
+*.pyc
+protseqanalyser/*/model/*
+protseqanalyser/*/__pycache__/*
+protseqanalyser/multiprotseqalign/__pycache__/models.cpython-36.pyc
