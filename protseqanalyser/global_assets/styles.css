@@ -14,7 +14,10 @@ body{
     width: 100%;
  
 }
-
+.text-holder h5{
+    font-style: italic;
+    font-weight: normal;
+}
 .container{
     position: relative;
     width: 100%;
@@ -70,3 +73,69 @@ ul.top li h2{
     color: #f0fff0;
 }
 
+.content h1{
+    color: #000000;
+    font-weight: bolder;
+}
+
+#wrapper{
+    background-color: #802b00;
+    padding: 15px;
+    width: 25%;
+    text-align: center;
+    margin: 20px;
+    border-radius: 50px;
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+#wrapper:hover{
+    background-color:#994d00; 
+}
+a:hover{
+    text-decoration-line: none;
+}
+
+form{
+    padding: 10px;
+    align-content: center;
+    color: white;
+
+}
+
+button{
+    background-color:#660000;
+    padding: 15px;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    width: 15%;
+    align-content: center;
+}
+
+button:hover{
+    background-color: #994d00;
+}
+
+.message {
+    color: white;
+    background-color: black;
+    padding: 40px;
+    text-align: center;
+    margin: 40px;
+    font-weight: bolder;
+}
+
+.result{
+    color: white;
+    font-weight: bolder;
+}
+
+.result p{
+     color: white;
+    background-color: black;
+    padding: 40px;
+    text-align: center;
+    margin: 40px;
+    font-weight: bolder;
+}
