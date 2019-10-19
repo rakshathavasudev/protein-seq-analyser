@@ -14,10 +14,12 @@ body{
     width: 100%;
  
 }
+
 .text-holder h5{
     font-style: italic;
     font-weight: normal;
 }
+
 .container{
     position: relative;
     width: 100%;
@@ -60,6 +62,7 @@ ul.top li h2{
     font-weight: bolder;
     float: left;
     padding: 5px 30px;
+
 }
 
 .card-deck{
@@ -139,3 +142,5 @@ button:hover{
     margin: 40px;
     font-weight: bolder;
 }
+
+
