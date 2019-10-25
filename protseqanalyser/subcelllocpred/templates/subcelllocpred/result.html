@@ -1,0 +1,14 @@
+{% extends 'base_sub.html' %}
+
+{% block one %}
+    <div class="result">
+        The results are:<br>
+        <ul>
+            {% for r in result %}
+            <li>>
+                {{ r }}
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}
