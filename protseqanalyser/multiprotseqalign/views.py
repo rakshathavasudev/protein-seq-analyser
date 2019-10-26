@@ -27,13 +27,17 @@ def result(request,id):
         return render(request, 'multiprotseqalign/message.html', {'message':message})
     if obj.completed:
         try:
-            with open(f'multiprotseqalign/model/Output/{id}', 'r') as f:
+            with open(f'models/1-MSA/Output/{id}', 'r') as f:
                 content = f.read()
         except:
             message = "Couldn't process your input. Please check your input sequence again."
             return render(request, 'multiprotseqalign/message.html', {'message':message})    
-        return render(request, 'multiprotseqalign/result.html', {'result':result})    
+        return render(request, 'multiprotseqalign/result.html', {'result':content})    
     else:
+<<<<<<< HEAD
         DOMAIN_NAME = 'localhost:8000/'
+=======
+        DOMAIN_NAME = 'localhost:8000'
+>>>>>>> 3e0b3956e6e3255eea2895ddd9cc260256609c5e
         message = f'Your entered input sequence is still under process. Please come back later to the same url {DOMAIN_NAME}{request.get_full_path()}'
         return render(request, 'multiprotseqalign/message.html', {'message':message})

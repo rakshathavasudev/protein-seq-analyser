@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'secstructclasspred.apps.SecstructclasspredConfig',
     'foldrecog.apps.FoldrecogConfig',
     'subcelllocpred.apps.SubcelllocpredConfig',
-    'widget_tweaks'
+    'widget_tweaks',
+
 ]
 
 MIDDLEWARE = [

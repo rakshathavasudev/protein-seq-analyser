@@ -7,7 +7,7 @@ django.setup()
 
 from multiprotseqalign.models import ProteinSequence
 
-model_path = 'multiprotseqalign/model'
+model_path = 'models/1-MSA'
 
 
 def main():
