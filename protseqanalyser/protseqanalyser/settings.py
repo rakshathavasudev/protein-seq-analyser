@@ -43,7 +43,6 @@ INSTALLED_APPS = [
     'foldrecog.apps.FoldrecogConfig',
     'subcelllocpred.apps.SubcelllocpredConfig',
     'widget_tweaks',
-
 ]
 
 MIDDLEWARE = [
