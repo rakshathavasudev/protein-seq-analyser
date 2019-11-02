@@ -1,12 +1,12 @@
 {% extends 'base_sub.html' %}
 
 {% block one %}
-    <div class="result">
+    <div class="result container-fluid">
         The results are:<br>
-        <ul>
+        <ul class="w3-theme">
             {% for r in result %}
-            <li>>
-                {{ r }}
+            <li>
+                <pre>{{ r }}</pre>
             </li>
             {% endfor %}
         </ul>
