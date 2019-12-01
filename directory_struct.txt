@@ -1,7 +1,7 @@
 /home/psa/
 ├── protein-seq-analyser-org
 │   ├── myprojectenv
-│   └── protseqanalyser
+│   └── protseqanalyser ( Web app)
 └── VGST_Scripts
     ├── 1-MSA
     ├── 2-PSSP
