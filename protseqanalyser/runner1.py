@@ -7,11 +7,11 @@ django.setup()
 
 from multiprotseqalign.models import ProteinSequence
 
-model_path = 'models/1-MSA'
+model_path = '/home/psa/protein-seq-analyser-org/VGST_Scripts/1-MSA'
 
 
 def main():
-    print('Runner 1 executing.')
+    # print('Runner 1 executing.')
     while True:
         print('Runner 1 awake.')
         obj = ProteinSequence.objects.filter(completed=False).all()
@@ -24,7 +24,7 @@ def main():
             os.system(exec_string)
             job.completed = True
             job.save()
-        print('Runner 1 going to sleep')
+        # print('Runner 1 going to sleep')
         sleep(3)
 
 if __name__ == '__main__':
