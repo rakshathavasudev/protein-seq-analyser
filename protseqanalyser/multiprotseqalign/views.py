@@ -27,7 +27,7 @@ def result(request,id):
         return render(request, 'multiprotseqalign/message.html', {'message':message})
     if obj.completed:
         try:
-            with open(f'models/1-MSA/Output/{id}', 'r') as f:
+            with open(f'../../VGST_Scripts/1-MSA/Output/{id}', 'r') as f:
                 content = f.read()
         except:
             message = "Couldn't process your input. Please check your input sequence again."
