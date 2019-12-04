@@ -7,6 +7,7 @@ app_name = 'secstructclasspred'
 
 urlpatterns = [
     url(r'^$', views.predict, name="predict"),
+    url(r'^result/(?P<id>[\w-]+)/$', views.result, name="result"),
 ]
 
 urlpatterns += staticfiles_urlpatterns()

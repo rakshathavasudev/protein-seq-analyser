@@ -1,10 +1,30 @@
-<a href="{% url 'home' %}">Home</a>
+{% extends 'base_sub.html' %}
 
-<div>
-    <h1>Sequence Structure Prediction</h1>
+{% block one %}
+
+<div class="content">
+    <h1 align="center">Secondary Structure Prediction</h1>
+    {% load widget_tweaks %}
+
     <form action="{% url 'secstructpred:predict' %}" method="POST" enctype="multipart/form-data">
+    	
         {% csrf_token %}
-        {{ form }}
-        <input type="submit">
+        
+        <!--{{ form }}-->
+
+       {% for field in form.visible_fields %}
+    <div class="form-group">
+    	<!--<label for="{{ field.id_for_label }}">{{ field.label }}</label>
+        {{ field|add_class:'form-control' }}-->
+      {{ field.label_tag }}
+      {% render_field field class="form-control" %}
+      
+    </div>
+  {% endfor %}
+
+
+        <button type="submit" >Submit</button>
     </form>
 </div>
+
+{% endblock %}

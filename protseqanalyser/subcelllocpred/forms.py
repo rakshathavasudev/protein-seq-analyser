@@ -1,7 +1,7 @@
 from django import forms
 from . import models
 
-class ProteinSequenceForm(forms.ModelForm):
+class SubCellLocationForm(forms.ModelForm):
     class Meta:
-        model = models.ProteinSequence
+        model = models.SubCellLocation
         fields = ['sequence']
