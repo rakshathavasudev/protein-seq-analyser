@@ -1,3 +1,4 @@
 *.pyc
 protseqanalyser/*/__pycache__/*
 protseqanalyser/models/*
+protseqanalyser/db.sqlite3
