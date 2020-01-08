@@ -1,8 +1,8 @@
-/home/psa/
+/home/psa
 ├── protein-seq-analyser
+│   ├── deployment_configs
 │   ├── myprojectenv
-│   └── protseqanalyser ( Web app)
-│   
+│   └── protseqanalyser (Web app)
 └── VGST_Scripts
     ├── 1-MSA
     ├── 2-PSSP
@@ -13,4 +13,4 @@
     ├── PSI-BLAST
     └── PSIPRED
 
-12 directories
+13 directories
