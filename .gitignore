@@ -3,3 +3,5 @@ protseqanalyser/*/__pycache__/*
 protseqanalyser/*/migrations/__pycache__/*
 protseqanalyser/models/*    
 protseqanalyser/db.sqlite3
+protseqanalyser/static
+protseqanalyser/protseqanalyser/settings.py
