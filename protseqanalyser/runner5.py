@@ -7,7 +7,7 @@ django.setup()
 
 from subcelllocpred.models import SubCellLocation  
 
-model_path = '/home/psa/protein-seq-analyser-org/VGST_Scripts/5-PSCP/'
+model_path = '/home/psa/VGST_Scripts/5-PSCP/'
 
 
 
@@ -18,11 +18,11 @@ def main():
         obj = SubCellLocation.objects.filter(completed=False).all()
         for job in obj:
             print(f'Processing {job.id} by Runner 5')
-            with open('/home/psa/protein-seq-analyser-org/VGST_Scripts/HHBlits/Datasets/WebRequests/Input/5_' + str(job.id) + '.fasta', 'w') as f:
+            with open('/home/psa/VGST_Scripts/HHBlits/Datasets/WebRequests/Input/5_' + str(job.id) + '.fasta', 'w') as f:
                 f.write(job.sequence)
-            with open('/home/psa/protein-seq-analyser-org/VGST_Scripts/PSIPRED/Datasets/WebRequests/Input/5_' + str(job.id) + '.fasta', 'w') as f:
+            with open('/home/psa/VGST_Scripts/PSIPRED/Datasets/WebRequests/Input/5_' + str(job.id) + '.fasta', 'w') as f:
                 f.write(job.sequence)
-            with open('/home/psa/protein-seq-analyser-org/VGST_Scripts/PSI-BLAST/Datasets/WebRequests/Input/5_' + str(job.id) + '.fasta', 'w') as f:
+            with open('/home/psa/VGST_Scripts/PSI-BLAST/Datasets/WebRequests/Input/5_' + str(job.id) + '.fasta', 'w') as f:
                 f.write(job.sequence)
             exec_string = f'cd {model_path}; bash Execute_PSCP.sh 5_{job.id};'
             print('Executing',exec_string)

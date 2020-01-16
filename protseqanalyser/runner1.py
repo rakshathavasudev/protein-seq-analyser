@@ -7,7 +7,7 @@ django.setup()
 
 from multiprotseqalign.models import ProteinSequence 
 
-model_path = '/home/psa/protein-seq-analyser-org/VGST_Scripts/1-MSA'
+model_path = '/home/psa/VGST_Scripts/1-MSA'
 
 
 def main():

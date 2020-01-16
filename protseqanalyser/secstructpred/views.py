@@ -28,7 +28,7 @@ def result(request,id):
         return render(request, 'secstructpred/message.html', {'message':message})
     if obj.completed:
         try:
-            with open(f'../../VGST_Scripts/2-PSSP/Results/{id}', 'r') as f:
+            with open(f'/home/psa/VGST_Scripts/2-PSSP/Results/{id}', 'r') as f:
                 content = f.read().replace('\'','"')
                 print('1',content)                
                 content = loads(content)
