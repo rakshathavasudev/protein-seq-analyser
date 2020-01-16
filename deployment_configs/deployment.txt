@@ -1,0 +1,18 @@
+# How to start :
+- sudo systemctl start nginx.service - this starts the web app server
+- sudo systemctl start runner5.service - this starts the processing the pending requests to model 5 through execution of runner5.py 
+-sudo systemctl start runner1.service - this starts the processing the pending requests to model 1 through execution of runner1.py 
+
+# How to stop :
+- sudo systemctl stop nginx.service - this stops the web app server
+- sudo systemctl stop runner5.service - this stops the processing the pending requests to model 5 
+-sudo systemctl stop runner1.service - this stops the processing the pending requests to model 1 
+
+# How to make it to start at boot of OS:
+- sudo systemctl enable nginx.service  
+- sudo systemctl enable runner5.service
+- sudo systemctl enable runner1.service 
+- And then execute commands of "How to start"
+
+
+

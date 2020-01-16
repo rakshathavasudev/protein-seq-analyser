@@ -1,0 +1,17 @@
+#  systemd service file for Gunicorn, present at /etc/systemd/system/	
+[Unit]
+Description=gunicorn daemon
+Requires=gunicorn.socket
+After=network.target
+
+[Service]
+User=psa
+Group=www-data
+WorkingDirectory=/home/psa/protein-seq-analyser/protseqanalyser
+ExecStart=/home/psa/anaconda3/bin/gunicorn \
+          --access-logfile - \
+          --workers 3 \
+          --bind unix:/run/gunicorn.sock \
+          protseqanalyser.wsgi:application
+[Install]
+WantedBy=multi-user.targ

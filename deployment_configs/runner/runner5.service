@@ -1,0 +1,13 @@
+# service to run runner5.py - which executes a master script handling all the i/o of model. It is present at /etc/systemd/system.
+[Unit]
+Description=runner_5 service
+After=multi-user.target
+
+[Service]
+User=psa
+Group=psa
+ExecStart=/home/psa/anaconda3/bin/python3  /home/psa/protein-seq-analyser/protseqanalyser/runner5.py start
+ExecStop=/home/psa/anaconda3/bin/python3 /home/psa/protein-seq-analyser/protseqanalyser/runner5.py stop
+
+[Install]
+WantedBy=multi-user.target

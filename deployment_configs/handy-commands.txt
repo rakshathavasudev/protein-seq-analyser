@@ -1,0 +1,44 @@
+# How to create and activate virtual env
+- virtualenv myprojectenv
+- source myprojectenv/bin/activate
+- pip3 install -r requirements.txt 
+
+
+# How to migrate to new settings 
+- manage.py makemigrations
+- manage.py migrate
+
+# Collect static files for nginx 
+- manage.py collectstatic 
+
+
+# Starting of services 
+- sudo systemctl start gunicorn.socket
+- sudo systemctl start gunicorn.service
+- sudo systemctl start nginx
+- sudo systemctl start runner1.service
+- sudo systemctl start runner5.service
+
+# Reload and restart the service after change in the corresponding service configfile 
+- sudo systemctl daemon-reload 
+- sudo systemctl restart gunicorn.service
+
+# If you update your Django application, you can restart the Gunicorn process to pick up the changes by typing:
+
+- sudo systemctl restart gunicorn
+
+# If you change the Nginx server block configuration, test the configuration and then Nginx by typing: 
+
+- sudo nginx -t && sudo systemctl daemon-reload && sudo systemctl restart nginx
+
+
+# Firewall rules 
+- sudo ufw default deny incoming
+- sudo ufw default allow outgoing
+- sudo ufw allow 'Nginx Full'
+- sudo ufw enable
+
+# Miscellaneous commands 
+- sudo kill $(sudo lsof -t -i:80) -- kill all processes associated binded to port number 80
+- git clone -b deployment --single-branch https://github.com/SaurabhAgarwala/protein-seq-analyser.git -- to clone only deployment branch
+

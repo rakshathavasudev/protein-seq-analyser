@@ -1,0 +1,17 @@
+#configure Nginx to pass traffic to the process, present at /etc/nginx/sites-available/, linked to  /etc/nginx/sites-enabled
+server {
+    listen 80;
+    server_name 10.100.52.47;
+
+    location = /favicon.ico { access_log off; log_not_found off; }
+    location /static/ {
+        root /home/psa/protein-seq-analyser/protseqanalyser;
+    }
+
+    location / {
+        include proxy_params;
+        proxy_pass 
+	http://unix:/run/gunicorn.sock;
+    }
+}
+
