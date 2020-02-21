@@ -1,0 +1,5 @@
+try:
+                os.rename(os.path.join(model_path, 'Results', f'5_{job.id}.txt'), os.path.join(model_path, 'Results', f'{job.id}'))
+            except:
+                with open(os.path.join(model_path, 'Results', f'{job.id}'), 'w') as f:
+                    f.write('Error in processing the input. Please retry with correct input')

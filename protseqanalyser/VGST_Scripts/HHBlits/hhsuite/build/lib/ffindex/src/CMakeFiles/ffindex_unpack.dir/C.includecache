@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/psa/VGST_Scripts/HHBlits/hhsuite/lib/ffindex/src/ffindex.h
+stdio.h
+-
+
+/home/psa/VGST_Scripts/HHBlits/hhsuite/lib/ffindex/src/ffindex_unpack.c
+limits.h
+-
+stdio.h
+-
+stdlib.h
+-
+unistd.h
+-
+sys/types.h
+-
+sys/wait.h
+-
+ffindex.h
+/home/psa/VGST_Scripts/HHBlits/hhsuite/lib/ffindex/src/ffindex.h
+ffutil.h
+/home/psa/VGST_Scripts/HHBlits/hhsuite/lib/ffindex/src/ffutil.h
+
+/home/psa/VGST_Scripts/HHBlits/hhsuite/lib/ffindex/src/ffutil.h
+err.h
+-
+errno.h
+-
+string.h
+-
+
