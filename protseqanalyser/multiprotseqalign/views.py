@@ -2,13 +2,29 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse, HttpResponseNotFound
 from . import models
 from . import forms
+from requests import post
+from json import loads
 
 # Create your views here.
 def predict(request):
     if request.method == 'POST':
         form = forms.ProteinSequenceForm(request.POST)
         if form.is_valid():
-            obj = form.save()
+            recaptcha = request.POST.get('g-recaptcha-response')
+            url = 'https://www.google.com/recaptcha/api/siteverify'
+            payload = {
+                # since no settings file, added for testing purpose
+                'secret': '6LdOg9sUAAAAAPKZF9RPXJrFrTD6SMmYNvK_diKv',
+                'response': recaptcha
+            }
+            resp = post(url, data=payload)
+            resp = loads(resp.content)
+            if resp['success']:
+                obj = form.save()
+            else:
+                message = 'Invalid captcha'
+                return render(request, 'multiprotseqalign/message.html', {'message':message})
+            # obj = form.save()
             return redirect('multiprotseqalign:result', id=obj.id)
     else:
         form = forms.ProteinSequenceForm
