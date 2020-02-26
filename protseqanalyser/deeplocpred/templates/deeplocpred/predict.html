@@ -1,0 +1,29 @@
+{% extends 'base_sub.html' %}
+
+{% block one %}
+
+<div class="content">
+    <h1 align="center">Deep Loc Sub-Cellular Location Prediction</h1>
+    {% load widget_tweaks %}
+
+    <form action="{% url 'deeplocpred:predict' %}" method="POST" enctype="multipart/form-data">
+    	
+        {% csrf_token %}
+        <!--{{ form }}-->
+
+       {% for field in form.visible_fields %}
+    <div class="form-group">
+    	<!--<label for="{{ field.id_for_label }}">{{ field.label }}</label>
+        {{ field|add_class:'form-control' }}-->
+      {{ field.label_tag }}
+      {% render_field field class="form-control" %}
+      
+    </div>
+  {% endfor %}
+      <!-- remove site key in production -->
+      <div class="g-recaptcha" data-sitekey="6LdOg9sUAAAAAHXskLTzP--tQG5kKFXhYvVc9EBC"></div>
+        <button type="submit" >Submit</button>
+    </form>
+</div>
+
+{% endblock %}

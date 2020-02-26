@@ -10,6 +10,7 @@ urlpatterns = [
     url('^secstructclasspred/',include('secstructclasspred.urls')),
     url('^foldrecog/',include('foldrecog.urls')),
     url('^subcelllocpred/',include('subcelllocpred.urls')),
+    url('^deeplocpred/',include('deeplocpred.urls')),
     url(r'^$',views.home, name='home'),
 ]
 
