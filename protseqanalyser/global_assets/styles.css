@@ -171,3 +171,70 @@ button:hover{
 	opacity: 0.9;
 	border-radius: 10px;
 }
+
+
+footer{
+    background-color: #000000;
+    position: fixed;
+    color: #F0FFF0;
+    bottom: 0;
+    width: 100%;
+    height: 220px;
+    
+}
+
+.footer-left{
+    float: left;
+  
+}
+.footer-center{
+   text-align: center;
+   
+}
+.footer-right{
+    float: right;
+    
+}
+
+.model-info{
+    background-color:#ffffffd8;
+    opacity: 0.8;
+    color: black;
+    padding: 20px;
+    margin: 5px;
+}
+.model-info h5{
+    color: black;
+    text-align: justify;
+}
+.detail-info{
+    background-color:#ffffffd8;
+    opacity: 0.8;
+    width: 100%;
+    color: black;
+    padding: 20px;
+    margin: 5px;
+}
+
+.detail-info h5{
+    color: black;
+
+}
+.detail-info a h5:hover{
+    color: rgb(102, 16, 16);
+}
+.input-format{
+    background-color: #ffffffd8;
+    opacity: 0.9;
+    width: 100%;
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    margin: 5px;
+}
+.input-format h5{
+    color: black;
+    text-align: justify;
+}
+.model h1{
+    text-align: center;
+}
