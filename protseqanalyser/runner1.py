@@ -5,15 +5,15 @@ import django
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'protseqanalyser.settings')
 django.setup()
 
-from multiprotseqalign.models import ProteinSequence
+from multiprotseqalign.models import ProteinSequence 
 
-model_path = '/home/psa/protein-seq-analyser-org/VGST_Scripts/1-MSA'
+model_path = '/home/psa/VGST_Scripts/1-MSA'
 
 
 def main():
-    # print('Runner 1 executing.')
+    print('Runner 1 executing.')
     while True:
-        print('Runner 1 awake.')
+        #print('Runner 1 awake.')
         obj = ProteinSequence.objects.filter(completed=False).all()
         for job in obj:
             print(f'Processing {job.id} by Runner 1')

@@ -8,4 +8,4 @@ Tool for analysing protein sequences using the following five models:
 * Model 4 - Protein Fold Recognition
 * Model 5 - Protein Subcellular Location Prediction
 
-The directory structure is mentioned in directory_struct.txt.
+The directory structure is mentioned in [directory_struct.txt](https://github.com/SaurabhAgarwala/protein-seq-analyser/blob/master/directory_struct.txt)

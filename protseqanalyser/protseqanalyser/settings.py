@@ -25,7 +25,7 @@ SECRET_KEY = 'm+q-@3kbahzdkye!^3=05kh9m(pp3!e1uv)y^42$hax8(9&2_4'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['10.100.52.47','localhost','127.0.0.1']
 
 
 # Application definition
@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'foldrecog.apps.FoldrecogConfig',
     'subcelllocpred.apps.SubcelllocpredConfig',
     'widget_tweaks',
+    'visitor.apps.VisitorConfig',
 ]
 
 MIDDLEWARE = [
@@ -86,7 +87,6 @@ DATABASES = {
     }
 }
 
-
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
 
@@ -128,3 +128,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'global_assets'),
 )
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+
+

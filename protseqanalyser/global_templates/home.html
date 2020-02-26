@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block one %}
-
+       
 
         <div class="card-deck">
             <a href="{% url 'multiprotseqalign:predict' %}" class="card">
@@ -46,6 +46,7 @@
             </a>  
          </div>
 
+
          <footer>
              <div class="footer-left">
                 <h5 style="text-align: center;font-weight:bold;">Contact</h5>
@@ -69,4 +70,12 @@
              </div>
              
          </footer>
+
+        {% comment %} To be added in the CSS {% endcomment %}
+         <footer style = "position: fixed;left: 0;bottom: 0;width: 100%;color: white;text-align: center;">
+         <h3> You are visitor number {{ visitors }} </h3>
+         </footer>
+
+
+
 {% endblock %}

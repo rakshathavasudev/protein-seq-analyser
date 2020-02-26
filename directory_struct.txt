@@ -1,15 +1,11 @@
-/home/psa/
-├── protein-seq-analyser-org
-│   ├── myprojectenv
-│   └── protseqanalyser ( Web app)
-└── VGST_Scripts
-    ├── 1-MSA
-    ├── 2-PSSP
-    ├── 3-PSSCP
-    ├── 4-PFR
-    ├── 5-PSCP
-    ├── HHBlits
-    ├── PSI-BLAST
-    └── PSIPRED
+/home/
+├── dev
+│   └── protein-seq-analyser (development-testing)
+├── psa
+│   ├── anaconda3
+│   ├── Downloads
+│   ├── protein-seq-analyser (production)
+│   └── VGST_Scripts
+└── psadev
 
-12 directories
+8 directories
