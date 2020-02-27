@@ -47,7 +47,7 @@ def result(request,id):
         return render(request, 'deeplocpred/message.html', {'message':message})
     if obj.completed:
         try:
-            with open(f'/home/psa/VGST_Scripts/6-DLPSCP/Results/{id}', 'r') as f:   # Change the path when editing
+            with open(f'/home/psa/VGST_Scripts/5-PSCP-Deep/Results/{id}', 'r') as f:   # Change the path when editing
                 content = f.read().replace('\'','"')
                 print('1',content)                
                 content = loads(content)
