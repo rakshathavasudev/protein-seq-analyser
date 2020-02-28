@@ -57,6 +57,6 @@ def result(request,id):
             return render(request, 'deeplocpred/message.html', {'message':message})  
         return render(request, 'deeplocpred/result.html', {'result':content})    
     else:
-        DOMAIN_NAME = 'localhost:8000'
+        DOMAIN_NAME = 'http://nitkit-vgst727-nppsa.nitk.ac.in'
         message = f'Your entered input sequence is still under process. Please come back later to the same url {DOMAIN_NAME}{request.get_full_path()}'
         return render(request, 'deeplocpred/message.html', {'message':message})
