@@ -1,11 +1,12 @@
 /home/
+├── deploy
+│   └── protein-seq-analyser (production)
 ├── dev
 │   └── protein-seq-analyser (development-testing)
 ├── psa
 │   ├── anaconda3
 │   ├── Downloads
-│   ├── protein-seq-analyser (production)
 │   └── VGST_Scripts
 └── psadev
 
-8 directories
+9 directories
