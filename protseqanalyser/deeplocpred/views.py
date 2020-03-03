@@ -47,7 +47,7 @@ def result(request,id):
         return render(request, 'deeplocpred/message.html', {'message':message})
     if obj.completed:
         try:
-            with open(f'/home/psa/VGST_Scripts/6-DLPSCP/Results/{id}', 'r') as f:   # Change the path when editing
+            with open(f'/home/psa/VGST_Scripts/5-PSCP-Deep/Results/{id}', 'r') as f:   # Change the path when editing
                 content = f.read().replace('\'','"')
                 print('1',content)                
                 content = loads(content)
@@ -57,6 +57,6 @@ def result(request,id):
             return render(request, 'deeplocpred/message.html', {'message':message})  
         return render(request, 'deeplocpred/result.html', {'result':content})    
     else:
-        DOMAIN_NAME = 'localhost:8000'
+        DOMAIN_NAME = 'http://nitkit-vgst727-nppsa.nitk.ac.in'
         message = f'Your entered input sequence is still under process. Please come back later to the same url {DOMAIN_NAME}{request.get_full_path()}'
         return render(request, 'deeplocpred/message.html', {'message':message})

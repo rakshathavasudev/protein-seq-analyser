@@ -4,6 +4,40 @@
 
 <div class="content">
     <h1 align="center">Protein Fold Recognition</h1>
+    <div class="container model">
+      <div class="row">
+          <div class="col-sm-6">
+            <div class="model-info">
+              <h1>Model Info</h1>
+              <h5>BeStSel (Beta Structure Selection) is a novel method for the secondary structure determination and fold recognition from protein circular dichroism spectra.
+                BeStSel (Beta Structure Selection) is a novel method for the secondary structure determination and fold recognition from protein circular dichroism spectra.
+              </h5>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="row">
+              <!-- <div class="col-sm-"> -->
+                <div class="detail-info">
+                  <h1>Info</h1>
+                  <a href="#"><h5>Give a detailed read about the model here.<i class='fas fa-external-link-square-alt'></i></h5></a>
+                </div>
+                
+              <!-- </div> --></div>
+
+              <!-- <div class="col-sm-6"> -->
+                <div class="row">
+                  <div class="input-format">
+                    <h1>Input format</h1>
+                    <h5>Please enter two data columns, wavelength and CD data. Separator can be space, tab, comma or semicolon. Please use dot as decimal point.
+                      Example:</h5>
+                  </div>
+                </div>
+                
+              <!-- </div> -->
+            </div>
+          </div>
+      </div>
+    </div>
     {% load widget_tweaks %}
 
     <form action="{% url 'foldrecog:predict' %}" method="POST" enctype="multipart/form-data">
