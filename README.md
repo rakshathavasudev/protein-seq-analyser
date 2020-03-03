@@ -6,6 +6,7 @@ Tool for analysing protein sequences using the following five models:
 * Model 2 - Protein Secondary Structure Prediction
 * Model 3 - Protein Secondary Structural Class Prediction
 * Model 4 - Protein Fold Recognition
-* Model 5 - Protein Subcellular Location Prediction
+* Model 5 - Protein Subcellular Location Prediction using BiSVM model
+* Model 6 - Protein Subcellular Location Prediction using DeepLoc model
 
 The directory structure is mentioned in [directory_struct.txt](https://github.com/SaurabhAgarwala/protein-seq-analyser/blob/master/directory_struct.txt)
