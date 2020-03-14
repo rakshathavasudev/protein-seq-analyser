@@ -16,27 +16,15 @@
     </head>
 
     <body style="background-image: url('{% static "img/background2.jpg" %}' )">
-        
-        <ul class="top">
+
+        <div class="wrap">
             <img src="{% static "img/emblem.jpg" %}" class="img-left">
-            <img src="{% static "img/DJ_logo.jpg" %}" class="img-right">
-            <!-- <li><img src="{% static "img/emblem.jpg" %}"></li>
-
-        <li><h2>National Institute of Technology,Karnataka</h2></li>
-        <div class="right">
-            <li ><img src="{% static "img/DJ_logo.jpg" %}" ></li>
-
-        </div> -->
-        </ul>
-        
-        <div class="container">
-        <div class="trans"></div>
-        
-        <div class="text-holder"><h2>Protein Sequence Analyzer</h2>
-        <br>
-        <h5></h5></div>
+            <h1>Protein Sequence Analyzer</h1>
+            
+             <img src="{% static "img/DJ_logo.jpg" %}" class="img-right">
         </div>
-
+        
+       
         {% block one %}
         {% endblock %}
     
