@@ -91,7 +91,7 @@ a:hover{
 }
 .card-deck{
     padding: 20px;
-    margin: 0;
+    margin-bottom: 10px;
 }
 
 .card{
@@ -204,11 +204,9 @@ footer{
     background-color: #000000;
     margin-top: 100px; 
     color: #F0FFF0;
-    bottom: 0; 
+    bottom: -10; 
     width: 100%;
-    
     overflow: hidden; 
-    
 }
 
 .footer-left{
