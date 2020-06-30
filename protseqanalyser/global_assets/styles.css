@@ -1,27 +1,11 @@
 body{
     font-family: "Lato", sans-serif;
-    /*background-image: url("img/background2.jpg");*/
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0;
     padding: 0;
   
 }
-/* .text-holder h2,h5{
-    text-align: center;
-    color:#F0FFF0;
-    font-weight: bold;
-    padding: 0;
-    margin: 0;
-    /* position: relative;
-    width: 100%; */
- 
-/* }
-
-.text-holder h5{
-    font-style: italic;
-    font-weight: normal;
-} */ 
 
 .container{
     position: relative;
@@ -205,7 +189,8 @@ footer{
     margin-top: 100px; 
     color: #F0FFF0;
     bottom: 0; 
-    width: auto;  
+   
+    width: 100%;  
     overflow: hidden; 
 }
 
@@ -214,16 +199,17 @@ footer{
     
   
 }
-.footer-center{
+/* .footer-center{
   text-align:center;
  
 }
 
 .footer-center a{ 
     margin-top: 15px;
-}
+} */
 .footer-right{  
     float: right;
+    padding: 35px;
     
 }
 
@@ -276,4 +262,70 @@ footer{
 }
 .text-center{
     text-align: center;
+}
+
+.bio{
+   margin-top: 10px; 
+   
+    
+}
+.row-bio{
+    padding: 20px;
+    text-align: center;
+}
+.bio-img img{
+    margin: 0;
+    border-radius:80px;
+    width: 200px;
+    height: 280px;
+    padding: 0;
+    
+}
+.bio-desc{
+    opacity: 0.8;
+    background-color:black;
+    text-align: justify;
+    color: white;
+    vertical-align: middle;
+    padding: 60px;
+    
+}
+
+#bio-wrapper{
+    background-color:#072749;
+    color: white;
+    padding: 15px;
+    width: 25%;
+    text-align: center;
+    margin: 20px;
+    border-radius: 50px;
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+#bio-wrapper:hover{
+    background-color:#122b42;
+    color: white;
+    padding: 15px;
+    width: 25%;
+    text-align: center;
+    margin: 20px;
+    border-radius: 50px;
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+.bio-wrapper{
+    
+    align-content: center;
+    width: 60%;
+}
+
+.bio h2{
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    opacity: 0.8;
+    background-color: rgb(5, 10, 14);
 }

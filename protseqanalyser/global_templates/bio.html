@@ -18,9 +18,11 @@
 
         <link>
     </head>
-    <body>
-        <h2 style="text-align: center;color: white;font-weight: bold;">Team Page</h2>
+    <body style="background-image: url('{% static "img/biobackground.jpeg" %}')">
+        <a href="{% url 'home' %}"><div id="bio-wrapper">Home</div></a>
+        
         <div class="container bio">
+            <h2>Team Page</h2>
             <div class="row row-bio">
                 <div class="col-sm-4 bio-img">
                     <img src="{% static "img/Nagamma Patil.png" %}" alt="image">
