@@ -14,7 +14,7 @@ def predict(request):
             url = 'https://www.google.com/recaptcha/api/siteverify'
             payload = {
                 # since no settings file, added for testing purpose
-                'secret': '6LdOg9sUAAAAAPKZF9RPXJrFrTD6SMmYNvK_diKv',
+                'secret': '6LcrOasZAAAAAN5H88IsPI_NItWBYona40l33k78',
                 'response': recaptcha
             }
             resp = post(url, data=payload)

@@ -24,3 +24,8 @@ def home(request):
         context = {"visitors": visitor.visitor_count}
         print('context ', context)
         return render(request,'home.html',context)
+
+
+def teampage(request):
+        context = {}
+        return render(request, 'bio.html', context)

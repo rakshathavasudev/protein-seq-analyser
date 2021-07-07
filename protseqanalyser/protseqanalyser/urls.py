@@ -4,14 +4,15 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from . import views
 
 urlpatterns = [
-    url('^admin/', admin.site.urls),
-    url('^multiprotseqalign/',include('multiprotseqalign.urls')),
-    url('^secstructpred/',include('secstructpred.urls')),
-    url('^secstructclasspred/',include('secstructclasspred.urls')),
-    url('^foldrecog/',include('foldrecog.urls')),
-    url('^subcelllocpred/',include('subcelllocpred.urls')),
-    url('^deeplocpred/',include('deeplocpred.urls')),
+    url(r'^admin/', admin.site.urls),
+    url(r'^multiprotseqalign/',include('multiprotseqalign.urls')),
+    url(r'^secstructpred/',include('secstructpred.urls')),
+    url(r'^secstructclasspred/',include('secstructclasspred.urls')),
+    url(r'^foldrecog/',include('foldrecog.urls')),
+    url(r'^subcelllocpred/',include('subcelllocpred.urls')),
+    url(r'^deeplocpred/',include('deeplocpred.urls')),
     url(r'^$',views.home, name='home'),
+    url(r'^team/$',views.teampage, name='teampage'),
 ]
 
 urlpatterns += staticfiles_urlpatterns()
